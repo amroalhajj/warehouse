@@ -1,0 +1,13 @@
+  server:
+    port: 8000
+
+  com:
+    clustered:
+      data:
+        warehouse:
+          error-msgs:
+            DealNotFoundException:
+              error-code: 1
+              rest-status: 404
+              msg: "The record does not exist"
+            
