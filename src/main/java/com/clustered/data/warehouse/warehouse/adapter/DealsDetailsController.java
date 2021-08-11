@@ -2,7 +2,6 @@ package com.clustered.data.warehouse.warehouse.adapter;
 
 import java.util.List;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,8 +23,8 @@ public class DealsDetailsController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<DealDetailsDTO>> loadDeals() {
-		return ResponseEntity.ok(dealsService.loadDeals());
+	public List<DealDetailsDTO> loadDeals() {
+		return dealsService.loadDeals();
 	}
 	
 	@PostMapping
